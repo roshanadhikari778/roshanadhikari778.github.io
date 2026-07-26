@@ -132,9 +132,29 @@ nav a.navlink.active { color: var(--teal); }
   box-shadow: 0 22px 48px -26px rgba(20, 36, 44, .45);
 }
 @media (max-width: 760px) {
-  .hero-grid { grid-template-columns: 1fr; }
+  .hero { padding: 2rem 0 2.4rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   .hero-photo { order: -1; text-align: left; }
-  .hero-photo img { max-width: 200px; }
+  .hero-photo img { max-width: 150px; }
+  .record { padding-top: 1.2rem; }
+}
+
+/* ---------- explore cards ---------- */
+.explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.explore-card {
+  position: relative; display: block;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+  padding: 1.2rem 1.3rem 1.1rem;
+  transition: border-color .2s, transform .2s;
+}
+.explore-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+.x-label { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--ink); display: block; margin-bottom: .3rem; }
+.x-desc { font-size: .88rem; color: var(--muted); display: block; padding-right: 1.4rem; line-height: 1.5; }
+.x-arrow { position: absolute; top: 1.05rem; right: 1.2rem; color: var(--teal); font-family: var(--mono); font-size: 1rem; }
+@media (max-width: 640px) {
+  .explore-grid { grid-template-columns: 1fr; gap: .7rem; }
+  .explore-card { padding: .95rem 1.1rem .9rem; }
+  .explore-block { padding-top: 2.2rem; padding-bottom: 2.6rem; }
 }
 
 /* ---------- sections ---------- */
